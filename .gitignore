@@ -1,0 +1,8 @@
+node_modules/
+target/
+.DS_Store
+*.env
+.env
+dist/
+build/
+chart_engine/pkg/
