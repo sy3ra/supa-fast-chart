@@ -7,7 +7,8 @@ curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 # Vercel이 패키지를 설치한 경로를 시스템 환경 변수에 강제로 병합합니다.
 export PATH="/rust/bin:$HOME/.cargo/bin:$PATH"
 
-echo "==== 2. Rust 엔진 WebAssembly 컴파일 ===="
+echo "==== 2. Rust 엔진 WebAssembly 타겟 추가 및 컴파일 ===="
+rustup target add wasm32-unknown-unknown
 cd chart_engine
 wasm-pack build --target web --out-dir ../web/pkg
 
