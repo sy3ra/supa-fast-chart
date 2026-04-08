@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cd ../chart_engine && wasm-pack build --target web --out-dir ../web/pkg && cd ../web && vite",
-    "build": "cd ../chart_engine && wasm-pack build --target web --out-dir ../web/pkg && cd ../web && vite build"
+    "build": "export PATH=\"/rust/bin:$HOME/.cargo/bin:$PATH\" && cd ../chart_engine && wasm-pack build --target web --out-dir ../web/pkg && cd ../web && vite build"
   },
   "devDependencies": {
     "vite": "^7.2.4",
